@@ -67,6 +67,9 @@ nvim init.lua
 
 **Neo Tree**: https://github.com/nvim-neo-tree/neo-tree.nvim
 
+### Tabs
+**Bufferline**: https://github.com/akinsho/bufferline.nvim
+
 ### Source file tree parser
 **Treesitter**: https://github.com/nvim-treesitter/nvim-treesitter
 
