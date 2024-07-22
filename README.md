@@ -39,6 +39,9 @@ nvim init.lua
 └── README.md
 ```
 
+### Session
+**Auto session**: https://github.com/rmagatti/auto-session
+
 ### Plugin manager
 **Lazy**: https://lazy.folke.io/
 
@@ -52,6 +55,8 @@ nvim init.lua
 **None LS (null)**: https://github.com/nvimtools/none-ls.nvim
 
 ### Theme
+**Rose Pine**: https://github.com/rose-pine/neovim
+
 **Catppuccin**: https://github.com/catppuccin/nvim
 
 **Lualine**: https://github.com/nvim-lualine/lualine.nvim
@@ -83,6 +88,11 @@ nvim init.lua
 **friendly-snippets**: https://github.com/rafamadriz/friendly-snippets
 
 **cmp-nvim-lsp**: https://github.com/hrsh7th/cmp-nvim-lsp
+
+### Git
+**git signs**: https://github.com/lewis6991/gitsigns.nvim
+
+**Fugitive**: https://github.com/tpope/vim-fugitive
 
 ### Debugging
 **nvim dap**: https://github.com/mfussenegger/nvim-dap
