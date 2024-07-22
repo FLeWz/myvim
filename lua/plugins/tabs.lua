@@ -8,6 +8,7 @@ return {
 
         vim.keymap.set("n", "<tab>", ":bnext<CR>", {})
         vim.keymap.set("n", "<S-tab>", ":bprevious<CR>", {})
+        vim.keymap.set("n", "<leader>x", ":bdelete<CR>", {})
 
         buffer.setup({
             options = {
