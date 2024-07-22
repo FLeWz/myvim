@@ -93,8 +93,8 @@ return {
                 capabilities = capabilities,
             })
 
-            vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-            vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+            vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP show info" })
+            vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
         end,
     },
     {
@@ -112,7 +112,7 @@ return {
                 },
             })
 
-            vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+            vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { desc = "Format buffer" })
         end,
     },
 }

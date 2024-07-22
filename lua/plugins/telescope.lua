@@ -8,10 +8,10 @@ return {
         config = function()
             local builtin = require('telescope.builtin')
 
-            vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-            vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-            vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-            vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+            vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = "Fuzzy find files" })
+            vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = "Fuzzy grep" })
+            vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = "Fuzzy buffers" })
+            vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = "Fuzzy help tags" })
         end
     },
     {

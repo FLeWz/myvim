@@ -6,9 +6,9 @@ return {
     config = function()
         local buffer = require("bufferline")
 
-        vim.keymap.set("n", "<tab>", ":bnext<CR>", {})
-        vim.keymap.set("n", "<S-tab>", ":bprevious<CR>", {})
-        vim.keymap.set("n", "<leader>x", ":bdelete<CR>", {})
+        vim.keymap.set("n", "<tab>", ":bnext<CR>", { desc = "Next tab" })
+        vim.keymap.set("n", "<S-tab>", ":bprevious<CR>", { desc = "Previous tab"})
+        vim.keymap.set("n", "<leader>x", ":bdelete<CR>", { desc = "Close tab" })
 
         buffer.setup({
             options = {

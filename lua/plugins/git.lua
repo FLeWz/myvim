@@ -6,8 +6,8 @@ return {
 
             signs.setup()
 
-            vim.keymap.set('n', '<leader>hp', signs.preview_hunk, {})
-            vim.keymap.set('n', '<leader>hd', signs.diffthis, {})
+            vim.keymap.set('n', '<leader>hp', signs.preview_hunk, { desc = "Git preview changes" })
+            vim.keymap.set('n', '<leader>hd', signs.diffthis, { desc = "Git show diff" })
         end
     },
     {

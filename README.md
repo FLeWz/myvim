@@ -42,6 +42,9 @@ nvim init.lua
 ### Session
 **Auto session**: https://github.com/rmagatti/auto-session
 
+### Helper
+**Which key**: https://github.com/folke/which-key.nvim
+
 ### Plugin manager
 **Lazy**: https://lazy.folke.io/
 

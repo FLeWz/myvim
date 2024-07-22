@@ -16,7 +16,7 @@ return {
             }
         })
 
-        vim.keymap.set('n', '<leader>n', ':Neotree selector<CR>', {})
-        vim.keymap.set('n', '<C-n>', ':Neotree close<CR>', {})
+        vim.keymap.set('n', '<leader>n', ':Neotree selector<CR>', { desc = "Open file tree" })
+        vim.keymap.set('n', '<C-n>', ':Neotree close<CR>', { desc = "Close file tree" })
     end
 }

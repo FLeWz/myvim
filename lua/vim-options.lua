@@ -8,5 +8,5 @@ vim.cmd("set number")
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-vim.keymap.set('i', '<C-s>', '<ESC>:w<CR>a', {})
-vim.keymap.set('n', '<C-s>', ':w<CR>', {})
+vim.keymap.set('i', '<C-s>', '<ESC>:w<CR>a', { desc = "Save buffer" })
+vim.keymap.set('n', '<C-s>', ':w<CR>', { desc = "Save buffer" })
