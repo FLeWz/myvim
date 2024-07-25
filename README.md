@@ -95,7 +95,9 @@ nvim init.lua
 ### Git
 **git signs**: https://github.com/lewis6991/gitsigns.nvim
 
-**Fugitive**: https://github.com/tpope/vim-fugitive
+**lazygit**: https://github.com/kdheepak/lazygit.nvim
+
+https://github.com/jesseduffield/lazygit?tab=readme-ov-file#installation
 
 ### Debugging
 **nvim dap**: https://github.com/mfussenegger/nvim-dap
@@ -103,3 +105,7 @@ nvim init.lua
 **nvim dap ui**: https://github.com/rcarriga/nvim-dap-ui
 
 **nvim nio**: https://github.com/nvim-neotest/nvim-nio
+
+### Rename
+**inc-rename**: https://github.com/smjonas/inc-rename.nvim
+
