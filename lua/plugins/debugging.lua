@@ -10,11 +10,6 @@ return {
 
         dapui.setup()
 
-		vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, { desc = "Toggle breakpoint" })
-		vim.keymap.set("n", "<F5>", dap.continue, { desc = "Debug continue" })
-		vim.keymap.set("n", "<F10>", dap.step_over, { desc = "Debug step over" })
-		vim.keymap.set("n", "<F11>", dap.step_into, { desc = "Debug step into" })
-
 		dap.listeners.before.attach.dapui_config = function()
 			dapui.open()
 		end

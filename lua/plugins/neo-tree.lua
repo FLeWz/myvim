@@ -5,7 +5,7 @@ return {
         "nvim-lua/plenary.nvim",
         "nvim-tree/nvim-web-devicons",
         "MunifTanjim/nui.nvim",
-        -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+        "3rd/image.nvim",
     },
     config = function()
         require("neo-tree").setup({
@@ -15,8 +15,5 @@ return {
                 }
             }
         })
-
-        vim.keymap.set('n', '<leader>n', ':Neotree selector<CR>', { desc = "Open file tree" })
-        vim.keymap.set('n', '<C-n>', ':Neotree close<CR>', { desc = "Close file tree" })
     end
 }

@@ -92,9 +92,6 @@ return {
             lspconfig.yamlls.setup({
                 capabilities = capabilities,
             })
-
-            vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP show info" })
-            vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
         end,
     },
     {
@@ -111,8 +108,6 @@ return {
                     null_ls.builtins.formatting.prettier,
                 },
             })
-
-            vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { desc = "Format buffer" })
         end,
     },
 }
