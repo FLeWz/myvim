@@ -6,6 +6,8 @@ return {
             "neovim/nvim-lspconfig",
         },
         config = function()
+            -- :lua print(vim.inspect(vim.lsp.get_active_clients()))
+
             require("mason").setup({})
 
             local mason_lspconfig = require("mason-lspconfig")
@@ -24,11 +26,32 @@ return {
             })
 
             mason_lspconfig.setup_handlers({
-                function (server)
+                function(server)
+                    if server == "intelephense" then
+                        return
+                    end
+
                     lspconfig[server].setup({
                         capabilities = capabilities,
                     })
-                end
+                end,
+            })
+
+            lspconfig.intelephense.setup({
+                capabilities = capabilities,
+                settings = {
+                    intelephense = {
+                        diagnostics = {
+                            undefinedTypes = false,
+                            undefinedFunctions = false,
+                            undefinedConstants = false,
+                            undefinedClassMethods = false,
+                            undefinedMethods = false,
+                            undefinedProperties = false,
+                            undefinedVariables = true,
+                        },
+                    },
+                },
             })
         end,
     },
