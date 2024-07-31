@@ -1,14 +1,18 @@
 return {
     {
         "williamboman/mason.nvim",
+        dependencies = {
+            "williamboman/mason-lspconfig.nvim",
+            "neovim/nvim-lspconfig",
+        },
         config = function()
-            require("mason").setup()
-        end,
-    },
-    {
-        "williamboman/mason-lspconfig.nvim",
-        config = function()
-            require("mason-lspconfig").setup({
+            require("mason").setup({})
+
+            local mason_lspconfig = require("mason-lspconfig")
+            local lspconfig = require("lspconfig")
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+            mason_lspconfig.setup({
                 ensure_installed = {
                     "lua_ls",
                     "clangd",
@@ -18,16 +22,13 @@ return {
                     "quick_lint_js",
                 },
             })
-        end,
-    },
-    {
-        "neovim/nvim-lspconfig",
-        config = function()
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
-            local lspconfig = require("lspconfig")
 
-            lspconfig.lua_ls.setup({
-                capabilities = capabilities,
+            mason_lspconfig.setup_handlers({
+                function (server)
+                    lspconfig[server].setup({
+                        capabilities = capabilities,
+                    })
+                end
             })
         end,
     },
