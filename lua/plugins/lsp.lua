@@ -11,23 +11,11 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "lua_ls",
-                    "asm_lsp",
-                    "bashls",
                     "clangd",
-                    "cmake",
-                    "autotools_ls",
-                    "cssls",
                     "html",
                     "htmx",
                     "jsonls",
                     "quick_lint_js",
-                    "tsserver",
-                    "markdown_oxide",
-                    "intelephense",
-                    "pylsp",
-                    "sqlls",
-                    "lemminx",
-                    "yamlls",
                 },
             })
         end,
@@ -39,57 +27,6 @@ return {
             local lspconfig = require("lspconfig")
 
             lspconfig.lua_ls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.asm_lsp.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.bashls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.clangd.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.cmake.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.autotools_ls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.cssls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.html.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.htmx.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.jsonls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.quick_lint_js.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.tsserver.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.markdown_oxide.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.intelephense.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.pylsp.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.sqlls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.lemminx.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.yamlls.setup({
                 capabilities = capabilities,
             })
         end,
