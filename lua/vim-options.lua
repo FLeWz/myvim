@@ -30,9 +30,6 @@ vim.g.maplocalleader = "\\"
 -- generic
 vim.keymap.set({ "n", "i" }, "<C-s>", "<ESC>:w<CR>", { desc = "Save buffer" })
 
--- which-key
-vim.keymap.set("n", "<leader>gc", function() require("which-key").show({ global = false }) end, { desc = "Keymap help" })
-
 -- telescope
 vim.keymap.set("n", "<leader>ff", function() require("telescope.builtin").find_files() end, { desc = "Fuzzy find files" })
 vim.keymap.set("n", "<leader>fg", function() require("telescope.builtin").live_grep() end, { desc = "Fuzzy grep" })
@@ -42,7 +39,7 @@ vim.keymap.set("n", "<leader>fh", function() require("telescope.builtin").help_t
 -- bufferline
 vim.keymap.set("n", "<tab>", ":bnext<CR>", { desc = "Next tab" })
 vim.keymap.set("n", "<S-tab>", ":bprevious<CR>", { desc = "Previous tab"})
-vim.keymap.set("n", "<leader>x", ":bdelete<CR>", { desc = "Close tab" })
+vim.keymap.set("n", "<leader>x", ":bdelete<CR>:bprevious<CR>", { desc = "Close tab" })
 
 -- neo-tree
 vim.keymap.set('n', '<leader>n', ':Neotree selector<CR>', { desc = "Open file tree" })
