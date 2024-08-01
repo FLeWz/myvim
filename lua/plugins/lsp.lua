@@ -42,13 +42,7 @@ return {
                 settings = {
                     intelephense = {
                         diagnostics = {
-                            undefinedTypes = false,
-                            undefinedFunctions = false,
-                            undefinedConstants = false,
-                            undefinedClassMethods = false,
-                            undefinedMethods = false,
-                            undefinedProperties = false,
-                            undefinedVariables = true,
+                            typeErrors = false,
                         },
                     },
                 },
