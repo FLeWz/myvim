@@ -27,10 +27,6 @@ return {
 
             mason_lspconfig.setup_handlers({
                 function(server)
-                    if server == "intelephense" then
-                        return
-                    end
-
                     lspconfig[server].setup({
                         capabilities = capabilities,
                     })
@@ -46,6 +42,11 @@ return {
                         },
                     },
                 },
+            })
+
+            lspconfig.html.setup({
+                capabilities = capabilities,
+                filetypes = { "html", "php", "tsx" },
             })
         end,
     },
