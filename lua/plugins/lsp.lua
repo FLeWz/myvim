@@ -4,9 +4,12 @@ return {
         dependencies = {
             "williamboman/mason-lspconfig.nvim",
             "neovim/nvim-lspconfig",
+            "hrsh7th/cmp-nvim-lsp",
         },
         config = function()
             -- :lua print(vim.inspect(vim.lsp.get_active_clients()))
+            -- :LspInfo
+            -- :CmpInfo
 
             require("mason").setup({})
 
@@ -41,27 +44,6 @@ return {
                             typeErrors = false,
                         },
                     },
-                },
-            })
-
-            lspconfig.html.setup({
-                capabilities = capabilities,
-                filetypes = { "html", "php", "tsx" },
-            })
-        end,
-    },
-    {
-        "nvimtools/none-ls.nvim",
-        dependencies = {
-            "nvimtools/none-ls-extras.nvim",
-        },
-        config = function()
-            local null_ls = require("null-ls")
-
-            null_ls.setup({
-                sources = {
-                    null_ls.builtins.formatting.stylua,
-                    null_ls.builtins.formatting.prettier,
                 },
             })
         end,
