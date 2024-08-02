@@ -47,6 +47,11 @@ return {
                     },
                 },
             })
+
+            lspconfig.html.setup({
+                capabilities = capabilities,
+                filetypes = { "html", "php", "tsx" },
+            })
         end,
     },
 }
