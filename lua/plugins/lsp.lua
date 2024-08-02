@@ -42,6 +42,7 @@ return {
                     intelephense = {
                         diagnostics = {
                             typeErrors = false,
+                            unusedSymbols = false,
                         },
                     },
                 },
