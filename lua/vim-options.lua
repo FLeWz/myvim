@@ -9,6 +9,7 @@ To rename multiple at the same time (regex):
 ]]--
 
 vim.opt.relativenumber = true
+vim.opt.number = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.expandtab = true
