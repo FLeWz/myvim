@@ -19,6 +19,9 @@ return {
                     ["ui-select"] = {
                         require("telescope.themes").get_dropdown({}),
                     },
+                    media_files = {
+                        find_cmd = "rg"
+                    },
                 },
             })
         end,
