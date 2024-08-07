@@ -72,3 +72,6 @@ vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { desc = "LazyGit" })
 
 -- inc-rename
 vim.keymap.set("n", "<leader>rn", function() return ":IncRename " .. vim.fn.expand("<cword>") end, { expr = true, desc = "LSP rename" })
+
+-- undotree
+vim.keymap.set("n", "<leader><F5>", vim.cmd.UndotreeToggle, { desc = "Show undo tree" })

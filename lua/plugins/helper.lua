@@ -7,4 +7,7 @@ return {
         },
         event = "VeryLazy",
     },
+    {
+        "mbbill/undotree",
+    }
 }
