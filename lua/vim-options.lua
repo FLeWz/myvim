@@ -41,7 +41,7 @@ vim.keymap.set("n", "<leader>fd", function() require('telescope').extensions.med
 -- bufferline
 vim.keymap.set("n", "<tab>", ":bnext<CR>", { desc = "Next tab" })
 vim.keymap.set("n", "<S-tab>", ":bprevious<CR>", { desc = "Previous tab"})
-vim.keymap.set("n", "<leader>x", ":bdelete<CR>:bprevious<CR>", { desc = "Close tab" })
+vim.keymap.set("n", "<leader>x", ":bdelete<CR>", { desc = "Close tab" })
 
 -- neo-tree
 vim.keymap.set('n', '<leader>n', ':Neotree selector<CR>', { desc = "Open file tree" })
