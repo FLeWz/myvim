@@ -52,6 +52,7 @@ vim.keymap.set('n', '<C-n>', ':Neotree close<CR>', { desc = "Close file tree" })
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP show info" })
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 vim.keymap.set("n", "<leader>bf", vim.lsp.buf.format, { desc = "Format buffer" })
+vim.keymap.set("n", "<leader>xx", ":Trouble diagnostics toggle<CR>", { desc = "Diagnostics" })
 
 -- DAP
 vim.keymap.set("n", "<leader>db", function() require("dap").toggle_breakpoint() end, { desc = "Toggle breakpoint" })

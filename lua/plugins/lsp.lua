@@ -54,4 +54,9 @@ return {
             })
         end,
     },
+    {
+        "folke/trouble.nvim",
+        opts = {},
+        cmd = "Trouble",
+    },
 }
