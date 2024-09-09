@@ -10,10 +10,14 @@ return {
     config = function()
         require("neo-tree").setup({
             buffers = {
-                follow_current_file = true,
+                follow_current_file = {
+                    enabled = true,
+                }
             },
             filesystem = {
-                follow_current_file = true,
+                follow_current_file = {
+                    enabled = true,
+                },
                 filtered_items = {
                     visible = true
                 },
