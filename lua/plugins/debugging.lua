@@ -76,5 +76,10 @@ return {
         }
 
         dap.configurations.c = dap.configurations.cpp
+
+        require("dap.ext.vscode").load_launchjs(nil, {
+            gdb = { "c" },
+            gdb_tx_colibri_bsp5 = { "c" },
+        })
     end,
 }
