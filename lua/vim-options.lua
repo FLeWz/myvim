@@ -58,7 +58,18 @@ vim.keymap.set("n", "<leader>lx", ":Trouble diagnostics toggle<CR>", { desc = "D
 
 -- DAP
 vim.keymap.set("n", "<leader>db", function() require("dap").toggle_breakpoint() end, { desc = "Toggle breakpoint" })
-vim.keymap.set("n", "<F5>", function() require("dap").continue() end, { desc = "Debug continue" })
+
+vim.keymap.set("n", "<F5>", function()
+    if vim.fn.filereadable(".vscode/launch.json") then
+        require("dap.ext.vscode").load_launchjs(nil, {
+            gdb = { "c", "cpp" },
+            gdb_tx_colibri_bsp5 = { "c", "cpp" },
+        })
+    end
+
+    require("dap").continue()
+end, { desc = "Debug continue" })
+
 vim.keymap.set("n", "<F10>", function() require("dap").step_over() end, { desc = "Debug step over" })
 vim.keymap.set("n", "<F11>", function() require("dap").step_into() end, { desc = "Debug step into" })
 
