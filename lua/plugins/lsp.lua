@@ -52,6 +52,13 @@ return {
                 capabilities = capabilities,
                 filetypes = { "html", "php", "tsx" },
             })
+
+            lspconfig.clangd.setup({
+                cmd = {
+                    vim.fn.stdpath("data") .. "/mason/bin/clangd",
+                    "--header-insertion=never",
+                },
+            })
         end,
     },
     {
