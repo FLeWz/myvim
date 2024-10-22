@@ -32,7 +32,8 @@ vim.g.maplocalleader = "\\"
 vim.keymap.set({ "n", "i" }, "<C-s>", "<ESC>:w<CR>", { desc = "Save buffer" })
 vim.keymap.set("n", "<leader>bw", ":highlight trailwhite ctermbg=red guibg=red<CR>:match trailwhite /\\s\\+$/<CR>", { desc = "Highlight trailing whitespace" })
 vim.keymap.set({ "n" }, "<leader>bv", ":set cc=80<CR>", { desc = "Vertical line at column 80" })
-vim.keymap.set({ "n" }, "<leader>bvc", ":set cc=<CR>", { desc = "Clear ertical line at column 80" })
+vim.keymap.set({ "n" }, "<leader>bvc", ":set cc=<CR>", { desc = "Clear vertical line at column 80" })
+vim.keymap.set({ "n" }, "<leader>bc", ":%s/\r//gc<CR>a<CR>", { desc = "Cleanup buffer after pasting, removes ^M" })
 
 -- telescope
 vim.keymap.set("n", "<leader>ff", function() require("telescope.builtin").find_files() end, { desc = "Fuzzy find files" })
