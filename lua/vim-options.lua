@@ -34,6 +34,7 @@ vim.keymap.set("n", "<leader>bw", ":highlight trailwhite ctermbg=red guibg=red<C
 vim.keymap.set({ "n" }, "<leader>bv", ":set cc=80<CR>", { desc = "Vertical line at column 80" })
 vim.keymap.set({ "n" }, "<leader>bvc", ":set cc=<CR>", { desc = "Clear vertical line at column 80" })
 vim.keymap.set({ "n" }, "<leader>bc", ":%s/\r//gc<CR>a<CR>", { desc = "Cleanup buffer after pasting, removes ^M" })
+vim.keymap.set({ "n" }, "<leader>br", ":%s/SEARCH/WITH/gc", { desc = "Inserts cmd for regex replace" })
 
 -- telescope
 vim.keymap.set("n", "<leader>ff", function() require("telescope.builtin").find_files() end, { desc = "Fuzzy find files" })
