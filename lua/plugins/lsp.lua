@@ -61,11 +61,6 @@ return {
         end,
     },
     {
-        "folke/trouble.nvim",
-        opts = {},
-        cmd = "Trouble",
-    },
-    {
         "pmizio/typescript-tools.nvim",
         dependencies = {
             "nvim-lua/plenary.nvim",
@@ -74,6 +69,18 @@ return {
         opts = {},
         config = function()
             require("typescript-tools").setup({})
+        end,
+    },
+    {
+        "folke/trouble.nvim",
+        opts = {},
+        cmd = "Trouble",
+    },
+    {
+        "j-hui/fidget.nvim",
+        opts = {},
+        config = function()
+            require("fidget").setup({})
         end,
     }
 }
