@@ -24,7 +24,6 @@ return {
                     "html",
                     "htmx",
                     "jsonls",
-                    "quick_lint_js",
                 },
             })
 
@@ -66,4 +65,15 @@ return {
         opts = {},
         cmd = "Trouble",
     },
+    {
+        "pmizio/typescript-tools.nvim",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "neovim/nvim-lspconfig",
+        },
+        opts = {},
+        config = function()
+            require("typescript-tools").setup({})
+        end,
+    }
 }
