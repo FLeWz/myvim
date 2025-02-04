@@ -1,4 +1,5 @@
 return {
+    --[[
     {
         "rose-pine/neovim",
         name = "rose-pine",
@@ -8,6 +9,7 @@ return {
             vim.cmd("colorscheme rose-pine-moon")
         end
     },
+    --]]
     --[[
     {
         "catppuccin/nvim",
@@ -18,6 +20,17 @@ return {
         end,
     },
     --]]
+    {
+        "navarasu/onedark.nvim",
+        config = function()
+            local onedark = require("onedark")
+
+            onedark.setup({
+                style = "dark"
+            })
+            onedark.load()
+        end,
+    },
     {
         "goolord/alpha-nvim",
         config = function()
