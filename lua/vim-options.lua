@@ -48,8 +48,7 @@ vim.keymap.set("n", "<S-tab>", ":bprevious<CR>", { desc = "Previous tab"})
 vim.keymap.set("n", "<leader>x", ":bdelete<CR>", { desc = "Close tab" })
 
 -- neo-tree
-vim.keymap.set('n', '<leader>n', ':Neotree selector<CR>', { desc = "Open file tree" })
-vim.keymap.set('n', '<C-n>', ':Neotree close<CR>', { desc = "Close file tree" })
+vim.keymap.set('n', '<leader>n', ':Neotree toggle<CR>', { desc = "Open file tree" })
 
 -- LSP
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP show info" })
