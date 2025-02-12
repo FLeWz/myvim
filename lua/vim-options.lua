@@ -81,3 +81,6 @@ vim.keymap.set("n", "<leader>rn", function() return ":IncRename " .. vim.fn.expa
 
 -- undotree
 vim.keymap.set("n", "<leader><F5>", vim.cmd.UndotreeToggle, { desc = "Show undo tree" })
+
+-- grug-far
+vim.keymap.set("n", "<leader>rg", vim.cmd.GrugFar, { desc = "Show Grug interface" })
