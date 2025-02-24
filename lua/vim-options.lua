@@ -28,9 +28,10 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 -- folds
-vim.wo.foldmethod = "expr"
-vim.o.foldexpr = "nvim_treesitter#foldexpr()"
-vim.wo.foldenable = false
+vim.o.foldcolumn = '0' -- can be set to 1
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99
+vim.o.foldenable = false
 
 -- generic
 vim.keymap.set({ "n", "i" }, "<C-s>", "<ESC>:w<CR>", { desc = "Save buffer" })
