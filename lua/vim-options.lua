@@ -28,7 +28,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 -- folds
-vim.o.foldcolumn = '0' -- can be set to 1
+vim.o.foldcolumn = '1' -- can be set to 0 or 1, 0 hides folding numbers/status
 vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldenable = false
