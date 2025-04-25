@@ -60,6 +60,7 @@ return {
             })
         end,
     },
+    --[[
     {
         "pmizio/typescript-tools.nvim",
         dependencies = {
@@ -71,6 +72,7 @@ return {
             require("typescript-tools").setup({})
         end,
     },
+    ]]--
     {
         "folke/trouble.nvim",
         opts = {},
