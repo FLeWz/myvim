@@ -1,3 +1,14 @@
+local parse_messages = function(opts)
+    local messages = {
+        { role = "system", content = opts.system_prompt },
+    }
+
+    vim
+        .iter(opts.messages)
+        :each(function(msg) table.insert(messages, { role = msg.role, content = msg.content }) end)
+    return messages
+end
+
 return {
     {
         "yetone/avante.nvim",
@@ -20,11 +31,30 @@ return {
         event = "VeryLazy",
         version = false,
         opts = {
-            provider = "ollama",
+            provider = "myOpenWebUI",
             providers = {
-                ollama = {
-                    endpoint = "http://localhost:11434",
+                myOpenWebUI = {
+                    __inherited_from = "openai",
+                    endpoint = "https://ai.pecnik.dev/api/chat/completions",
                     model = "qwen2.5-coder:latest",
+                    api_key_name = "OPENWEBUI_TOKEN",
+                    parse_messages = parse_messages,
+                    parse_curl_args = function(opts, code_opts)
+                        local headers = {
+                            ["Content-Type"] = "application/json",
+                            ["Authorization"] = "Bearer " .. os.getenv(opts.api_key_name)
+                        }
+
+                        return {
+                            url = opts.endpoint,
+                            headers = headers,
+                            body = vim.tbl_deep_extend("force", {
+                                model = opts.model,
+                                stream = true,
+                                messages = parse_messages(code_opts),
+                            }, {}),
+                        }
+                    end,
                 },
             },
         },
