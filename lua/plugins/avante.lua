@@ -38,6 +38,7 @@ return {
                     endpoint = "https://ai.pecnik.dev/api/chat/completions",
                     model = "qwen2.5-coder:latest",
                     api_key_name = "OPENWEBUI_TOKEN",
+                    disable_tools = true,
                     parse_messages = parse_messages,
                     parse_curl_args = function(opts, code_opts)
                         local headers = {
