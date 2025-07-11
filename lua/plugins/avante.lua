@@ -1,11 +1,17 @@
 local parse_messages = function(opts)
     local messages = {
-        { role = "system", content = opts.system_prompt },
+        --{ role = "system", content = opts.system_prompt },
+        { role = "system", content = "You are a highly skilled software engineer with extensive knowledge in many programming languages, frameworks, design patterns, and best practices.\n\nRespect and use existing conventions, libraries, etc that are already present in the code base.\n\nMake sure code comments are in English when generating them.\n\nMemory is crucial, you must follow the instructions in <memory>!\n\n====\n\nFiles will be provided to you as context through <file> tag!\n\n====\n\nRULES\n\n- NEVER reply the updated code.\n\n- Always reply to the user in the same language they are using.\n\n- Do not ask for more information than necessary.\n\n\n\n\n\n" }
     }
 
-    vim
-        .iter(opts.messages)
-        :each(function(msg) table.insert(messages, { role = msg.role, content = msg.content }) end)
+    for i, msg in ipairs(opts.messages) do
+        if(msg.role == "assistant") then
+            break
+        end
+
+        table.insert(messages, { role = msg.role, content = msg.content })
+    end
+
     return messages
 end
 
