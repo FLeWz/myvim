@@ -8,7 +8,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     if vim.v.shell_error ~= 0 then
         vim.api.nvim_echo({
             { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-            { out, "WarningMsg" },
+            { out,                            "WarningMsg" },
             { "\nPress any key to exit..." },
         }, true, {})
         vim.fn.getchar()
@@ -26,5 +26,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
         local client = vim.lsp.get_client_by_id(args.data.client_id)
         client.server_capabilities.semanticTokenProvider = nil
+    end,
+})
+
+-- bitbake LSP
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+    pattern = { "*.bb", "*.bbappend", "*.bbclass", "*.inc", "conf/*.conf" },
+    callback = function()
+        vim.lsp.start({
+            name = "bitbake",
+            cmd = { "bitbake-language-server" }
+        })
     end,
 })

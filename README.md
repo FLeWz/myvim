@@ -28,13 +28,14 @@ mv clone nvim
 
 ## Required packages
 
-`sudo apt install nodejs npm`
+https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
+
+`sudo apt install nodejs npm ripgrep chafa`
 
 `curl https://sh.rustup.rs -sSf | sh`
 
-`sudo apt install ripgrep`
-
 https://github.com/jesseduffield/lazygit?tab=readme-ov-file#installation
 
-`sudo apt install chafa`
+https://bitbake-language-server.readthedocs.io/en/latest/resources/install.html
 
+Maybe have to run `pip install --upgrade attrs`.
