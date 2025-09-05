@@ -28,14 +28,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
         client.server_capabilities.semanticTokenProvider = nil
     end,
 })
-
--- bitbake LSP
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
-    pattern = { "*.bb", "*.bbappend", "*.bbclass", "*.inc", "conf/*.conf" },
-    callback = function()
-        vim.lsp.start({
-            name = "bitbake",
-            cmd = { "bitbake-language-server" }
-        })
-    end,
-})
