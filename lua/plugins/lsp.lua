@@ -21,21 +21,9 @@ return {
                 ensure_installed = {
                     "lua_ls",
                     "clangd",
-                    "html",
-                    "htmx",
                     "jsonls",
                 },
             })
-
-            --[[
-            mason_lspconfig.setup_handlers({
-                function(server)
-                    lspconfig[server].setup({
-                        capabilities = capabilities,
-                    })
-                end,
-            })
-            ]]--
 
             lspconfig.intelephense.setup({
                 capabilities = capabilities,
@@ -59,12 +47,6 @@ return {
                     vim.fn.stdpath("data") .. "/mason/bin/clangd",
                     "--header-insertion=never",
                 },
-            })
-
-            lspconfig.bitbake.setup({
-                capabilities = capabilities,
-                filetypes = { "bb", "bbappend", "bbclass" },
-                cmd = { "bitbake-language-server" }
             })
         end,
     },
