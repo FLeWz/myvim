@@ -44,7 +44,7 @@ vim.keymap.set({ "n" }, "<leader>br", ":%s/SEARCH/WITH/gc", { desc = "Inserts cm
 -- telescope
 vim.keymap.set("n", "<leader>ff", function() require("telescope.builtin").find_files() end, { desc = "Fuzzy find files" })
 vim.keymap.set("n", "<leader>fg", function() require("telescope.builtin").live_grep() end, { desc = "Fuzzy grep" })
-vim.keymap.set("n", "<leader>fb", function() require("telescope.builtin").buffers() end, { desc = "Fuzzy buffers" })
+vim.keymap.set("n", "<leader>fb", function() require("telescope.builtin").current_buffer_fuzzy_find() end, { desc = "Fuzzy current buffer" })
 vim.keymap.set("n", "<leader>fh", function() require("telescope.builtin").help_tags() end, { desc = "Fuzzy help tags" })
 vim.keymap.set("n", "<leader>fd", function() require('telescope').extensions.media_files.media_files() end, { desc = "Fuzzy media files" })
 
