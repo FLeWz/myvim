@@ -17,13 +17,14 @@ return {
             local lspconfig = require("lspconfig")
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+			--[[
             mason_lspconfig.setup({
                 ensure_installed = {
                     "lua_ls",
-                    "clangd",
                     "jsonls",
                 },
             })
+			]]--
 
             lspconfig.intelephense.setup({
                 capabilities = capabilities,
@@ -50,19 +51,6 @@ return {
             })
         end,
     },
-    --[[
-    {
-        "pmizio/typescript-tools.nvim",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "neovim/nvim-lspconfig",
-        },
-        opts = {},
-        config = function()
-            require("typescript-tools").setup({})
-        end,
-    },
-    ]]--
     {
         "folke/trouble.nvim",
         opts = {},
