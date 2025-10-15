@@ -26,6 +26,11 @@ return {
             })
 			]]--
 
+            lspconfig.lua_ls.setup({
+                capabilities = capabilities,
+                filetypes = { "lua" },
+            })
+
             lspconfig.intelephense.setup({
                 capabilities = capabilities,
                 settings = {
