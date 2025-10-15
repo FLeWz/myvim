@@ -61,7 +61,7 @@ vim.keymap.set('n', '<leader>n', ':Neotree toggle<CR>', { desc = "Open file tree
 -- LSP
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP show info" })
 vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = "Code action" })
-vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "Format buffer" })
+vim.keymap.set({ "n", "v" }, "<leader>lf", vim.lsp.buf.format, { desc = "Format buffer" })
 vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, { desc = "Goto definition" })
 vim.keymap.set("n", "<leader>lr", vim.lsp.buf.references, { desc = "View references" })
 vim.keymap.set("n", "<leader>lx", ":Trouble diagnostics toggle<CR>", { desc = "Diagnostics" })
