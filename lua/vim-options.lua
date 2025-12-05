@@ -83,6 +83,7 @@ vim.keymap.set("n", "<F11>", function() require("dap").step_into() end, { desc =
 vim.keymap.set("n", "<leader>gc", function() require("gitsigns").preview_hunk() end, { desc = "Git preview changes" })
 vim.keymap.set("n", "<leader>gd", function() require("gitsigns").diffthis() end, { desc = "Git show diff" })
 vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { desc = "LazyGit" })
+vim.keymap.set("n", "<leader>gr", "<cmd>!echo -n $(git rev-parse HEAD) | xclip -selection clipboard<CR><CR>", { desc = "Gets current git ref" })
 
 -- inc-rename
 vim.keymap.set("n", "<leader>rn", function() return ":IncRename " .. vim.fn.expand("<cword>") end, { expr = true, desc = "LSP rename" })
