@@ -13,8 +13,7 @@ return {
 
             require("mason").setup({})
 
-            local mason_lspconfig = require("mason-lspconfig")
-            local lspconfig = require("lspconfig")
+            -- local mason_lspconfig = require("mason-lspconfig")
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			--[[
@@ -26,12 +25,18 @@ return {
             })
 			]]--
 
-            lspconfig.lua_ls.setup({
+			vim.lsp.enable("lua_ls")
+			vim.lsp.enable("html")
+			vim.lsp.enable("intelephense")
+			vim.lsp.enable("clangd")
+			vim.lsp.enable("basedpyright")
+
+            vim.lsp.config("html", {
                 capabilities = capabilities,
-                filetypes = { "lua" },
+                filetypes = { "html", "php", "tsx" },
             })
 
-            lspconfig.intelephense.setup({
+            vim.lsp.config("intelephense", {
                 capabilities = capabilities,
                 settings = {
                     intelephense = {
@@ -43,12 +48,7 @@ return {
                 },
             })
 
-            lspconfig.html.setup({
-                capabilities = capabilities,
-                filetypes = { "html", "php", "tsx" },
-            })
-
-            lspconfig.clangd.setup({
+            vim.lsp.config("clangd", {
                 cmd = {
                     vim.fn.stdpath("data") .. "/mason/bin/clangd",
                     "--header-insertion=never",
