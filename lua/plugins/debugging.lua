@@ -32,10 +32,10 @@ return {
             args = { "-i", "dap" },
         }
 
-        dap.adapters.gdb_tx_colibri_bsp5 = {
+        dap.adapters.gdb_hpc = {
             type = "executable",
-            command = "../gdb/gdb-15.1/gdb/gdb-tx-colibri-bsp5",
-            args = { "-i", "dap" },
+            command = "../gdb/gdb-15.2/gdb/gdb",
+            args = { "-i", "dap", "--data-directory", "../gdb/gdb-15.2/gdb/data-directory" },
         }
 
         dap.configurations.cpp = {
@@ -79,7 +79,7 @@ return {
 
         require("dap.ext.vscode").load_launchjs(nil, {
             gdb = { "c" },
-            gdb_tx_colibri_bsp5 = { "c" },
+            gdb_hpc = { "c" },
         })
     end,
 }
