@@ -31,6 +31,17 @@ return {
 			vim.lsp.enable("clangd")
 			vim.lsp.enable("basedpyright")
 
+			vim.lsp.config("basedpyright", {
+                capabilities = capabilities,
+				settings = {
+					basedpyright = {
+						analysis = {
+							typeCheckingMode = "basic",
+						}
+					},
+				},
+			})
+
             vim.lsp.config("html", {
                 capabilities = capabilities,
                 filetypes = { "html", "php", "tsx" },
