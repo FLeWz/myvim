@@ -38,8 +38,10 @@ vim.o.foldenable = false
 -- generic
 vim.keymap.set({ "n", "i" }, "<C-s>", "<ESC>:w<CR>", { desc = "Save buffer" })
 vim.keymap.set("n", "<leader>bw", ":highlight trailwhite ctermbg=red guibg=red<CR>:match trailwhite /\\s\\+$/<CR>", { desc = "Highlight trailing whitespace" })
-vim.keymap.set("n", "<leader>bv", ":set cc=80<CR>", { desc = "Vertical line at column 80" })
-vim.keymap.set("n", "<leader>bvc", ":set cc=<CR>", { desc = "Clear vertical line at column 80" })
+vim.keymap.set("n", "<leader>bv1", ":set cc=76<CR>", { desc = "Vertical line at column 76" })
+vim.keymap.set("n", "<leader>bv2", ":set cc=80<CR>", { desc = "Vertical line at column 80" })
+vim.keymap.set("n", "<leader>bv3", ":set cc=100<CR>", { desc = "Vertical line at column 100" })
+vim.keymap.set("n", "<leader>bvc", ":set cc=<CR>", { desc = "Clear vertical line" })
 vim.keymap.set("n", "<leader>bc", ":%s/\r", { desc = "Cleanup buffer after pasting, removes ^M" })
 vim.keymap.set("n", "<leader>br", ":%s/SEARCH/WITH/gc", { desc = "Inserts cmd for regex replace" })
 
