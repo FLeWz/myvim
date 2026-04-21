@@ -44,6 +44,7 @@ vim.keymap.set("n", "<leader>bv3", ":set cc=100<CR>", { desc = "Vertical line at
 vim.keymap.set("n", "<leader>bvc", ":set cc=<CR>", { desc = "Clear vertical line" })
 vim.keymap.set("n", "<leader>bc", ":%s/\r", { desc = "Cleanup buffer after pasting, removes ^M" })
 vim.keymap.set("n", "<leader>br", ":%s/SEARCH/WITH/gc", { desc = "Inserts cmd for regex replace" })
+vim.keymap.set("n", "<leader>bn", ":tabnew<CR>", { desc = "Open [No Name] tab" })
 
 -- telescope
 vim.keymap.set("n", "<leader>ff", function() require("telescope.builtin").find_files() end, { desc = "Fuzzy find files" })
