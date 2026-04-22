@@ -78,5 +78,11 @@ return {
         config = function()
             require("fidget").setup({})
         end,
-    }
+    },
+	{
+		"sontungexpt/better-diagnostic-virtual-text",
+		config = function()
+			require('better-diagnostic-virtual-text').setup({ inline = false })
+		end
+	}
 }
