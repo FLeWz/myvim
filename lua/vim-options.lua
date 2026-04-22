@@ -54,9 +54,9 @@ vim.keymap.set("n", "<leader>fh", function() require("telescope.builtin").help_t
 vim.keymap.set("n", "<leader>fd", function() require('telescope').extensions.media_files.media_files() end, { desc = "Fuzzy media files" })
 
 -- bufferline
-vim.keymap.set("n", "<tab>", ":bnext<CR>", { desc = "Next tab" })
-vim.keymap.set("n", "<S-tab>", ":bprevious<CR>", { desc = "Previous tab"})
-vim.keymap.set("n", "<leader>x", ":bdelete<CR>", { desc = "Close tab" })
+vim.keymap.set("n", "<tab>", ":BufferNext<CR>", { desc = "Next tab" })
+vim.keymap.set("n", "<S-tab>", ":BufferPrevious<CR>", { desc = "Previous tab"})
+vim.keymap.set("n", "<leader>x", ":BufferClose<CR>", { desc = "Close tab" })
 
 -- neo-tree
 vim.keymap.set('n', '<leader>n', ':Neotree toggle<CR>', { desc = "Open file tree" })
