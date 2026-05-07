@@ -44,7 +44,10 @@ return {
 					find_files = {
 						path_display = filenameFirst,
 					}
-				}
+				},
+				defaults = {
+					layout_strategy = 'vertical',
+				},
 			})
 		end,
 	},
