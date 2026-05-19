@@ -5,6 +5,7 @@ return {
             "williamboman/mason-lspconfig.nvim",
             "neovim/nvim-lspconfig",
             "hrsh7th/cmp-nvim-lsp",
+			"FLeWz/clangd-direct-includes.nvim",
         },
         config = function()
             -- :lua print(vim.inspect(vim.lsp.get_active_clients()))
@@ -12,6 +13,7 @@ return {
             -- :CmpInfo
 
             require("mason").setup({})
+			require("clangd-direct-includes")
 
             -- local mason_lspconfig = require("mason-lspconfig")
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -29,6 +31,7 @@ return {
 			vim.lsp.enable("html")
 			vim.lsp.enable("intelephense")
 			vim.lsp.enable("clangd")
+			vim.lsp.enable("clangd-direct-includes")
 			vim.lsp.enable("basedpyright")
 
 			vim.lsp.config("basedpyright", {
@@ -63,6 +66,7 @@ return {
                 cmd = {
                     vim.fn.stdpath("data") .. "/mason/bin/clangd",
                     "--header-insertion=never",
+					"--completion-style=detailed",
                 },
             })
         end,
