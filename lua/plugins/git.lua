@@ -20,4 +20,11 @@ return {
 			"nvim-lua/plenary.nvim",
 		},
 	},
+	{
+		'FLeWz/gen-commit-changelog.nvim',
+		version = false,
+		config = function()
+			require('gen-commit-changelog')
+		end,
+	},
 }
