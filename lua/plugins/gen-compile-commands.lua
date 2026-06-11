@@ -1,5 +1,5 @@
 return {
-	'FLeWz/gen-compile-commands.vim',
+	'FLeWz/gen-compile-commands.nvim',
 	version = false,
 	config = function()
 		require('gen-compile-commands')
