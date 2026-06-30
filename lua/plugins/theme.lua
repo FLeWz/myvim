@@ -1,25 +1,13 @@
 return {
-    --[[
-    {
-        "rose-pine/neovim",
-        name = "rose-pine",
-        config = function()
-            require("rose-pine").setup()
-
-            vim.cmd("colorscheme rose-pine-moon")
-        end
-    },
-    --]]
-    --[[
     {
         "catppuccin/nvim",
         name = "catppuccin",
         priority = 1000,
         config = function()
-            vim.cmd.colorscheme("catppuccin")
+            vim.cmd.colorscheme("catppuccin-mocha")
         end,
     },
-    --]]
+    --[[
     {
         "navarasu/onedark.nvim",
         config = function()
@@ -31,6 +19,7 @@ return {
             onedark.load()
         end,
     },
+    --]]
     {
         "goolord/alpha-nvim",
         config = function()
