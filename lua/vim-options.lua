@@ -83,6 +83,7 @@ vim.keymap.set("n", "<F11>", function() require("dap").step_into() end, { desc =
 -- <CR>
 
 -- GIT
+vim.keymap.set("n", "<leader>gb", ":GitBlameToggle<CR>", { desc = "Toggle git blame" })
 vim.keymap.set("n", "<leader>gc", function() require("gitsigns").preview_hunk() end, { desc = "Git preview changes" })
 vim.keymap.set("n", "<leader>gd", function() require("gitsigns").diffthis() end, { desc = "Git show diff" })
 vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { desc = "LazyGit" })

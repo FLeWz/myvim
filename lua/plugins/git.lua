@@ -27,4 +27,14 @@ return {
 			require('gen-commit-changelog')
 		end,
 	},
+	{
+		"f-person/git-blame.nvim",
+		event = "VeryLazy",
+		opts = {
+			enabled = false,
+			message_template = "<date> | <author> | <summary> <<sha>>",
+			date_format = "%r",
+			virtual_text_column = 1,
+		},
+	},
 }
