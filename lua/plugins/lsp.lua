@@ -6,6 +6,8 @@ return {
             "neovim/nvim-lspconfig",
             "hrsh7th/cmp-nvim-lsp",
 			"FLeWz/clangd-direct-includes.nvim",
+			"jay-babu/mason-null-ls.nvim",
+			"nvimtools/none-ls.nvim",
         },
         config = function()
             -- :lua print(vim.inspect(vim.lsp.get_active_clients()))
@@ -14,9 +16,13 @@ return {
 
             require("mason").setup({})
 			require("clangd-direct-includes")
+			require("mason-null-ls").setup({
+				ensure_installed = { "black" }
+			})
 
             -- local mason_lspconfig = require("mason-lspconfig")
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local null_ls = require("null-ls")
 
 			--[[
             mason_lspconfig.setup({
@@ -26,6 +32,12 @@ return {
                 },
             })
 			]]--
+
+			null_ls.setup({
+				sources = {
+					null_ls.builtins.formatting.black,
+				},
+			})
 
 			vim.lsp.enable("lua_ls")
 			vim.lsp.enable("html")
